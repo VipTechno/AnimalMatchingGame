@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnimalMatchingGame.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+            <Button x:Name="StartGameButton" Text="Start Game" FontSize="Large" Clicked="StartGameButton_Clicked" />
+
+            <StackLayout x:Name="GameArea" IsVisible="False" Spacing="10">
+
+                <Label x:Name="EnterYourNameLabel" Text="Enter your name:" FontSize="Medium"  />
+                <Entry x:Name="PlayerNameEntry" Placeholder="Your Name" />
+                <Button x:Name="SubmitNameButton" Text="Submit Name" Clicked="SubmitName_Clicked" />
+
+                <Label x:Name="VehicleEmojis" Text="🚗 🚕 🚙 🚌 🚓 🚑 🚒 🚐 🛻 🚜" FontSize="Large" HorizontalOptions="Center" />
+
+                <StackLayout x:Name="LeaderboardListMain" IsVisible="False">
+                    <Label Text="Leaderboard" FontSize="Medium" FontAttributes="Bold" />
+                    <ListView x:Name="LeaderboardList">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout>
+                                        <Label Text="{Binding}" FontSize="Medium" TextColor="MediumPurple" HorizontalOptions="Center"  />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+
+            </StackLayout>
+
+            <Button x:Name="PlayAgainButton" Text="Play again?" FontSize="Large" Clicked="PlayAgainButton_Clicked" IsVisible="False" />
+            <Label x:Name="TimeElapsed"  Text="Time Elapsed: 0.0 seconds" FontSize="Large" />
+
+            <Label x:Name ="BestTime" Text="Best time: 0.0seconds" FontSize="Large" IsVisible="False" />
+
+            <FlexLayout x:Name="AnimalButtons" Wrap="Wrap" MaximumWidthRequest="400" IsVisible="False">
+
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+                <Button BackgroundColor="LightBlue" BorderColor="Black" BorderWidth="1" HeightRequest="100" WidthRequest="100" FontSize="60" Clicked="Button_Clicked" />
+
+
+
+            </FlexLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
